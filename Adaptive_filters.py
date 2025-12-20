@@ -2,6 +2,22 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 def NLMS_filter(noise, mixed, mu=0.7, order=20, epsilon=1e-6):
+    """
+    NLMS (Normalized Least Mean Squares) adaptive filter
+
+    The filter tries to estimate the noise in the mixed signal from the recorded noise
+    and substracts it to get the denoised signal
+    
+    Parameters:
+    - noise: reference noise signal
+    - mixed: desired signal + noise
+    - forget_fact: forgetting factor lambda (0 < lambda ≤ 1)
+    - order: filter order
+    - epsilon: small constant to avoid singularities
+    
+    Returns:
+    - denoised signal
+    """
     # I try to get an estimate of n in the mixed signal and then I substract that estimate to obtain the desired underlying signal
     N = len(mixed)
     n_hat = np.zeros(N)
