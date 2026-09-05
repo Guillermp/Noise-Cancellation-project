@@ -20,3 +20,7 @@ The adaptive noise cancellation process can be summarized as follows as follows.
 
 The error signal turns out to be the filtered signal.
 
+## Testing
+
+A document with detailed information on the testing suite can be found in the [Adaptive-Filters-TESTING.md file](Adaptive-Filters-TESTING.md).
+
